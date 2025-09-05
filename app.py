@@ -115,7 +115,7 @@ if st.session_state.user:
     if st.sidebar.button("🚪 Logout"):
         st.session_state.user = None
         st.session_state.page = "Home"
-        st.experimental_rerun()
+       
 else:
     st.sidebar.info("Not logged in")
 
@@ -166,7 +166,7 @@ elif st.session_state.page == "Login":
             }
             st.success(f"✅ Welcome {user[3]}! Redirecting to Dashboard...")
             st.session_state.page = "Dashboard"
-            st.experimental_rerun()
+            
         else:
             st.error("❌ Invalid email or password.")
 
